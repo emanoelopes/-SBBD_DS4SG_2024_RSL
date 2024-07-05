@@ -2,8 +2,13 @@
 title: Seleção dos estudos
 ---
 flowchart TD
-    A[(2989)] -->|"Anteriores a 2019 (n=123)"| B(2024)
-    B --> |"Duplicados (n=339)"| C(1685)
-    C --> |"Leitura do título, resumo e palavras-chave (n=1622)"| D(63)
-    D --> |"Indisponíveis na íntegra (n=44)"| E(19)
-    E --> |"Leitura do conteúdo (n=16)"| F(3)
+    IEEE[("IEEE (n=471)")] --> A
+    SCOPUS[("SCOPUS (n=645)")] --> A
+    ACM[("ACM (n=897)")] --> A
+    CAPES[("CAPES n=(6)")] --> A
+    SBC[("SBC-OpenLib n=(5)")] --> A
+    A("Estudos identificados n=(2989)") -->|"Anteriores a 2019 (n=123)"| B("Entre 2019 e 2024 n=(2024)")
+    B --> |"Duplicados (n=339)"| C("Resumos a serem lidos n=(1685)")
+    C --> |"Resumos desclassificados (n=1622)"| D("Classificados n=(63)")
+    D --> |"Indisponíveis na íntegra (n=44)"| E("Conteúdos a serem lidos  n=(19)")
+    E --> |"Leitura do conteúdo (n=16)"| F("Estudos selecionados n=(3)")
